@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <script src="Destinations.js"></script>
+        <script src="Ficheréservation.js"></script>
+        <title>page de réservation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+    <body onload="change_title()">
+
+        <div class="header" > 
+            <img src="Images/logo.png" alt="logo">
+        </div>
+
+
+        <div id="head"> 
+            <p>Fly like a royal eagle</p>
+        </div>
+
+        <div class="topnav"> 
+            <a href="Agence.html">
+                    Accueil
+            </a>
+            <a href="Pagederéservation.html">
+                Page de réservation
+            </a>
+            <a href="Contacts.html">
+                Contacts
+            </a>
+            <a href="Récapitulatif.html">
+                récapitulatif réservation
+            </a>
+        </div>
+
+        
+        <h1 id="blabla">Formulaire de réservation</h1>
+        <form action="Récapitulatif.html" method="POST">
+            <fieldset>
+                <legend>Renseignements personnels</legend>
+                Prénom*:<br>
+                <input type="text" id="Prénom" name="Prénom de l'utilisateur" required><br>
+                Nom*:<br>
+                <input type="text" required><br>
+                Adresse mail*:<br>
+                <input type="email" required><br>
+                Téléphone:<br>
+                <input type="text"><br>
+            </fieldset><br>
+            <fieldset>
+                <legend>Renseignements de voyage</legend>
+                Date de départ*:<br>
+                <input class="input_zone" type="date" id="start_date" onchange="price_calculator()" required><br>
+                Date de retour*:<br>
+                <input class="input_zone" type="date" id="end_date" onchange="price_calculator()" required><br>
+                Nombre d'adultes*:<br>
+                <input class="input_zone" type="number" id="adult_number" min=1 value="1" onchange="price_calculator()" required><br>
+                Nombre d'enfants (-12 ans)*:<br>
+                <input class="input_zone" type="number" id="child_number" min=0 value="0" onchange="price_calculator()" required><br>
+                Petit déjeuner ? (12€/personne):<br>
+                <input type="radio" class="bfast" name="included_bfast" id="included_bfast" value="yes" onchange="price_calculator()">Oui
+                <input type="radio" class="bfast" name="included_bfast" id="not_included_bfast" value="no" onchange="price_calculator()">Non<br><br>
+            
+
+            </fieldset><br>
+            <fieldset>
+                <legend>Autres renseignements que vous souhaitez apporter</legend>
+                <textarea></textarea>
+            </fieldset><br>
+            <p>* : Champs obligatoires</p>
+
+            <p>Prix total :</p>
+            <p id="responsive_price">0€</p>
+
+            <input type="submit" value="Soumettre le formulaire" />
+            <input type="reset" value="Réinitialiser">
+
+
+        </form>
+        <footer class="grill">
+            <p class="blanc"><img src="Images/logo.png" alt="logo"><br>
+            Voyagence l'agence de voyage la plus efficace, vous cherchez à organiser votre meilleur trip , n'hésitez plus choisissez Voyagence</p>
+            <div><h2>A propos de nous</h2>
+                <p class="blanc">qui somme nous ?</p>
+            </div>
+            <div><h2>Contacts</h2>
+                <p class="blanc"><a href="Contacts.html" class="lien">Nous contacter</a><br><br>
+                Numéro de téléphone:<br><br>             
+                adresse mail:<br><br>
+                localisation:</P>
+            </div>
+        
+        </footer>
+    </body>
+</html>
+
